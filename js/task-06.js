@@ -17,10 +17,9 @@ const invalid = () => {
 }
 input.addEventListener('blur', () => {
     
-    if (input.value.length >= input.dataset.length) {
+    if (input.value.length === Number(input.dataset.length)) {
         valid();
     } else { invalid(); }
     
 })
-
 
