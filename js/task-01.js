@@ -6,9 +6,9 @@ const { listCategories, listItems } = elements;
 
 console.log(`Number of categories: ${listItems.length}`);
 
-for (let i = 0; i < listItems.length; i += 1) {
-  const hiddens = listItems[i].querySelector("h2").textContent;
+listItems.forEach(function (listItems, i) {
+  const hiddens = elements.listItems[i].querySelector("h2").textContent;
   console.log(`Category: ${hiddens}`);
-  const liLength = listItems[i].querySelectorAll("li");
+  const liLength = elements.listItems[i].querySelectorAll("li");
   console.log(`Elements: ${liLength.length}`);
-}
+});
